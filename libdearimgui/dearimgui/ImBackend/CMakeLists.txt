@@ -1,9 +1,6 @@
 # ######################################################
 # Read and load all sub directory
 set ( subDirectory
-   ImBackend/
-   ImNodeFlow/
-   ImPlot/
 )
 foreach (directory ${subDirectory})
    add_subdirectory (${directory})
@@ -13,17 +10,13 @@ endforeach ()
 # ######################################################
 # Reset the file scope
 set( localFile
-   imconfig.h
-   imgui.h
-   imgui.cpp
-   imgui_internal.h
-   imgui_draw.cpp
-   imgui_tables.cpp
-   imgui_widgets.cpp
-   imstb_rectpack.h
-   imstb_textedit.h
-   imstb_truetype.h
-   imgui_demo.cpp
+   imgui_impl_glfw.h
+   imgui_impl_glfw.cpp
+   imgui_impl_opengl2.h
+   imgui_impl_opengl2.cpp   
+   imgui_impl_opengl3.h
+   imgui_impl_opengl3.cpp
+   imgui_impl_opengl3_loader.h
 )
 foreach( file ${localFile} )
    set(tmpFile "${CMAKE_CURRENT_SOURCE_DIR}/${file}")

@@ -1,7 +1,6 @@
-
-#include "libdearimgui/dearimgui/imgui.h"
-#include "imgui_impl_glfw.h"
-#include "imgui_impl_opengl3.h"
+#include "../libdearimgui/dearimgui/imgui.h"
+#include "../libdearimgui/dearimgui/ImBackend/imgui_impl_glfw.h"
+#include "../libdearimgui/dearimgui/ImBackend/imgui_impl_opengl3.h"
 #include <stdio.h>
 #include <GLFW/glfw3.h> // Will drag system OpenGL headers
 #include <GL/glu.h>
