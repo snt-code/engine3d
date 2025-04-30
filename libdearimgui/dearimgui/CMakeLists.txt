@@ -4,6 +4,7 @@ set ( subDirectory
    ImBackend/
    ImNodeFlow/
    ImPlot/
+   glad/
 )
 foreach (directory ${subDirectory})
    add_subdirectory (${directory})
