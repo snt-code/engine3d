@@ -140,7 +140,7 @@ public:
         glUniform4i(glGetUniformLocation(shaderProgramID, name.c_str()), value1, value2, value3, value4); 
     }
 
-    void set4Float(const std::string &name, float value1, int value2, float value3, int value4) const
+    void set4Float(const std::string &name, float value1, float value2, float value3, float value4) const
     { 
         glUniform4f(glGetUniformLocation(shaderProgramID, name.c_str()), value1, value2, value3, value4); 
     }

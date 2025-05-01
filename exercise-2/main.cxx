@@ -8,7 +8,7 @@
 #include <GL/glu.h>
 
 #include <iostream>
-
+#include <cmath>
 
 #include "shader.h"
 
@@ -193,9 +193,10 @@ int main(int, char**)
 
     const char *fragmentShaderSource ="#version 330 core\n"
         "out vec4 FragColor;\n"
+        "uniform vec4 ourColor;\n"
         "void main()\n"
         "{\n"
-        "    FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
+        "    FragColor = ourColor;\n"
         "}\0";
 
     Shader shader;
@@ -261,7 +262,13 @@ int main(int, char**)
 
         // draw our first triangle
         // glUseProgram(shaderProgram);
+
+        float timeValue = glfwGetTime();
+        float greenValue = std::sin(timeValue) / 2.0f + 0.5f;
+
         shader.use();
+        shader.set4Float("ourColor", 1.0f, greenValue, 0.2f, 1.0f);
+
         glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
         //glDrawArrays(GL_TRIANGLES, 0, 6);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
