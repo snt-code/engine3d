@@ -1,4 +1,16 @@
 {
+    "folders": [
+    {
+      "path": "."  // or relative path to your project folder
+    }
+    ],
+    "settings": {
+    "C_Cpp.default.includePath": [
+      "${workspaceFolder}/**"
+    ],
+    "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    "C_Cpp.default.cppStandard": "c++17",      
     "files.associations": {
         "array": "cpp",
         "atomic": "cpp",
@@ -46,6 +58,8 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "cinttypes": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "*.cxx": "cpp"
+    },
     }
 }
